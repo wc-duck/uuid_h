@@ -1,0 +1,24 @@
+language: cpp
+os:
+  - linux
+  - osx
+
+sudo: false
+
+env:
+  matrix:
+   - UUID_CONFIG=debug
+   - UUID_CONFIG=release
+
+compiler:
+  - gcc
+  - clang
+
+install:
+  - git clone https://github.com/matricks/bam.git
+  - cd bam
+  - ./make_unix.sh
+  - cd ..
+
+script:
+  - bam/bam compiler=$CC config=$UUID_CONFIG -r sc test
