@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/wc-duck/uuid_h.svg?branch=master)](https://travis-ci.org/wc-duck/uuid_h)
-[![Build status](https://ci.appveyor.com/api/projects/status/gu9luwtutq3lkkob?svg=true)](https://ci.appveyor.com/project/wc-duck/uuid_h)
+[![Build status](https://ci.appveyor.com/api/projects/status/3ahugtvj76veel83?svg=true)](https://ci.appveyor.com/project/wc-duck/uuid-h)
 
 # uuid.h
 Single-file, STB-style, library to generate UUID:s. No dependencies
