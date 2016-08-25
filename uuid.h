@@ -236,24 +236,24 @@ void uuid4_generate( uuid* res )
 	memcpy( res->bytes, &g, sizeof( res->bytes ) );
 #elif defined( __APPLE__ )
 	CFUUIDRef new_uuid = CFUUIDCreate(0x0);
-	CFUUIDRef bytes = CFUUIDGetUUIDBytes( new_uuid );
+	CFUUIDBytes bytes = CFUUIDGetUUIDBytes( new_uuid );
 
-	res.bytes[0] = bytes.byte0;
-	res.bytes[1] = bytes.byte1;
-	res.bytes[2] = bytes.byte2;
-	res.bytes[3] = bytes.byte3;
-	res.bytes[4] = bytes.byte4;
-	res.bytes[5] = bytes.byte5;
-	res.bytes[6] = bytes.byte6;
-	res.bytes[7] = bytes.byte7;
-	res.bytes[8] = bytes.byte8;
-	res.bytes[9] = bytes.byte9;
-	res.bytes[10] = bytes.byte10;
-	res.bytes[11] = bytes.byte11;
-	res.bytes[12] = bytes.byte12;
-	res.bytes[13] = bytes.byte13;
-	res.bytes[14] = bytes.byte14;
-	res.bytes[15] = bytes.byte15;
+	res->bytes[0] = bytes.byte0;
+	res->bytes[1] = bytes.byte1;
+	res->bytes[2] = bytes.byte2;
+	res->bytes[3] = bytes.byte3;
+	res->bytes[4] = bytes.byte4;
+	res->bytes[5] = bytes.byte5;
+	res->bytes[6] = bytes.byte6;
+	res->bytes[7] = bytes.byte7;
+	res->bytes[8] = bytes.byte8;
+	res->bytes[9] = bytes.byte9;
+	res->bytes[10] = bytes.byte10;
+	res->bytes[11] = bytes.byte11;
+	res->bytes[12] = bytes.byte12;
+	res->bytes[13] = bytes.byte13;
+	res->bytes[14] = bytes.byte14;
+	res->bytes[15] = bytes.byte15;
 	CFRelease ( new_uuid );
 #else
 #  error "unhandled platform"
