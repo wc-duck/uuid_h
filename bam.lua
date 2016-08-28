@@ -99,6 +99,10 @@ function set_compiler( settings, config )
             settings.cc.flags:Add( "-O2" )
         end
     end
+    
+    if platform == "macosx" then
+      settings.link.flags:Add("-framework", "CoreFoundation")
+    end
     return compiler
 end
 
