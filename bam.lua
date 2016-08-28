@@ -100,8 +100,7 @@ function set_compiler( settings, config )
         end
     end
     
-    print(platform)
-    if platform == "macosx" then
+    if platform == "osx_x86_64" then
       settings.link.flags:Add("-framework", "CoreFoundation")
     end
     return compiler
