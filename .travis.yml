@@ -21,4 +21,4 @@ install:
   - cd ..
 
 script:
-  - bam/bam compiler=$CC config=$UUID_CONFIG -r sc test
+  - bam/bam compiler=$CC config=$UUID_CONFIG -r sc test -v
