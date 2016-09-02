@@ -221,6 +221,7 @@ void uuid4_generate( uuid* res )
 
 	char uuid_str[36];
 	size_t read = fread( uuid_str, 1, sizeof( uuid_str ), f );
+	fclose(f);
 	if( read != 36 )
 		return;
 	uuid_from_string( uuid_str, res );
